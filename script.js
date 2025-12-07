@@ -43,13 +43,13 @@ function getStartTime() {
   let homeLatitiude = 34.98449;
   let homeLongitude = 136.99180;
   let accuracy = gpsAccuracy * 0.00001;
-  if (latitude < homeLatitiude - accuracy 
-      || latitude > homeLatitiude + accuracy 
-      || longitude < homeLongitude - accuracy 
-      || longitude > homeLongitude + accuracy) {
-    document.getElementById("not-home").textContent = "自宅以外からは計測開始できません";
-    return;
-  }
+  // if (latitude < homeLatitiude - accuracy 
+  //     || latitude > homeLatitiude + accuracy 
+  //     || longitude < homeLongitude - accuracy 
+  //     || longitude > homeLongitude + accuracy) {
+  //   document.getElementById("not-home").textContent = "自宅以外からは計測開始できません";
+  //   return;
+  // }
   document.getElementById("start-time").textContent = makeTime();
   document.getElementById("not-start").textContent =""
   startTime = new Date().getTime();
