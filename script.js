@@ -35,15 +35,15 @@ let startTriger = 0;
 let latitude = 0;
 let longitude = 0;
 let gpsAccuracy = 250; //単位はメートル
-let destinationLatitude = Number(document.getElementById("dest-latitude").value)
-let destinationLongitude = Number(document.getElementById("dest-longitude").value)
+let destinationLatitude = 0;
+let destinationLongitude = 0;
 let interval = 1;
 
 // 開始処理
 function getStartTime() {
-  let homeLatitiude = 34.98449;
-  let homeLongitude = 136.99180;
-  let accuracy = gpsAccuracy * 0.00001;
+  // let homeLatitiude = 34.98312;
+  // let homeLongitude = 136.98990;
+  // let accuracy = gpsAccuracy * 0.00001;
   // if (latitude < homeLatitiude - accuracy 
   //     || latitude > homeLatitiude + accuracy 
   //     || longitude < homeLongitude - accuracy 
@@ -57,10 +57,13 @@ function getStartTime() {
   startTriger = 1;
   navigator.geolocation.watchPosition(success, error);
   interval = setInterval(underMoving, 1000);
+  destinationLatitude = Number(document.getElementById("dest-latitude").value)
+  destinationLongitude = Number(document.getElementById("dest-longitude").value)
 }
       
 // 測定関数
 function underMoving() {
+  let accuracy = gpsAccuracy * 0.00001;
   document.getElementById("current-latitude").textContent = latitude.toFixed(5);
   document.getElementById("current-longitude").textContent = longitude.toFixed(5);
   console.log("test")
@@ -73,7 +76,7 @@ function underMoving() {
         document.getElementById("spended-time").textContent = getSpendTime(startTime, arrivalTime);
         document.getElementById("arrived").textContent = "到着しました🐢";
         clearInterval(interval);
-      }
+  }
 }
       
 // 所要時間計算関数
