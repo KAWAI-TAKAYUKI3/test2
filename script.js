@@ -76,7 +76,7 @@ function getArrivalTimeForTest() {
   arrivalTime = new Date().getTime();
   document.getElementById("spended-time").textContent = getSpendTime(startTime, arrivalTime);
   console.log(latitude, longitude, destinationLatitude, destinationLongitude);
-  document.getElementById("arrived").textContent = "到着しました🐢";
+  document.getElementById("arrived").textContent = "到着しました🐢" + latitude + "," + longitude;
 }
 
 // 所要時間計算関数
