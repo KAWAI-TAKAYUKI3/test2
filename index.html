@@ -9,25 +9,33 @@
 </head>
 
 <body>
-  <h1>通勤時間記録⏱</h1>
-   <p>現在の緯度：<span id="current-latitude">00.0000 </span> &emsp;目的地の緯度 <input id="dest-latitude" type=text value="34.99155"></p>
-   <p>現在の経度：<span id="current-longitude">00.0000 </span> &emsp;目的地の経度 <input id="dest-longitude" type=text value="136.99503"></p>
-   <button id="start-bottun" type="button">出発！</button>
-   <div id="not-home"></div>
-   <div id="not-start"></div>
-   <div id="time">
-     <P>出発時刻：<span id="start-time"></span></P>
-     <P>到着時刻：<span id="arrival-time"></span></P>
-     <P>所要時間：<span id="spended-time"></span></P>
-   </div>
-   <p id="arrived"></p>
-   <br>
-   <button id="arrival-bottun" type="button">テスト用強制到着</button>
-   <br>
-   <br>
-   <button id="locate-bottun" type="button">テスト用強制位置付与</button>
-   <script type="text/javascript" src="script.js"></script>
-   <p>仮位置：仮緯度 &emsp;<input id="temp-latitude" type=text value="34.">&nbsp;<input id="temp-longitude" type=text value="136."></p>
-</body>
+  <div class="parent">
+    <h1>通勤時間記録⏱</h1>
+    <p>現在の緯度：<span id="current-latitude">34.98312 </span> &nbsp; 現在の経度：<span id="current-longitude">136.98990 </span></p><br>
+    <button id="start-bottun" type="button">出発！</button><br>
+    <div id="not-home"></div>
+    <div id="not-start"></div>
+    <div id="time">
+      <P class="times">出発時刻 &emsp; <span id="start-time">00：00：00</span></P>
+      <p class="lap-time">セクター１所要時間 &emsp; <span id="lap1-spend"></span></p>
+      <p class="times">緯度:<input id="first-latitude" type=text value="35.03147"> &nbsp; 経度:<input id="first-longitude" type=text value="137.01833"></p>
+      <P class="times">途中時刻 &emsp; <span id="lap1"></span></P>
+      <p class="lap-time">セクター２所要時間 &emsp; <span id="lap2-spend"></span></p>
+      <p class="times">緯度:<input id="second-latitude" type=text value="35.01746"> &nbsp; 経度:<input id="second-longitude" type=text value="137.00619"></p>
+      <P class="times">途中時刻 &emsp; <span id="lap2"></span></P>
+      <p class="lap-time">セクター３所要時間 &emsp; <span id="lap3-spend"></span></p>
+      <p class="times">緯度:<input id="third-latitude" type=text value="35.00144"> &nbsp; 経度:<input id="third-longitude" type=text value="137.00508"></p>
+      <P class="times">到着時間 &emsp; <span id="arrival-time"></span></P><br>
+      <P >総所要時間 &emsp; <span id="spended-time"></span></P>
+    </div>
+    <p id="arrived"></p>
+    <br><br><br><br>
+    <button id="arrival-bottun" type="button">テスト用強制到着</button>
+    <br><br>
+    <!-- <button id="locate-bottun" type="button">テスト用強制位置付与</button> -->
+    <script type="text/javascript" src="script.js"></script>
+    <!-- <p>仮位置：仮緯度 &emsp;<input id="temp-latitude" type=text value="34.">&nbsp;<input id="temp-longitude" type=text value="136."></p> -->
+  </div>
+  </body>
 
 </html>

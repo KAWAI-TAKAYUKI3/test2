@@ -1,3 +1,4 @@
+
 #not-home {
     background-color: rgb(247, 143, 8);
 }
@@ -27,6 +28,63 @@
 
 #temp-longitude {
     background-color: rgb(220, 220, 245);
+    max-width: 100%;
+    width: 5em;
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#start-bottun {
+    width: 300px;
+}
+
+.times {
+    transform: translate(-70px);
+}
+
+.lap-time {
+    transform: translate(30px);
+}
+
+#first-latitude {
+    background-color: beige;
+    max-width: 100%;
+    width: 5em;
+}
+
+
+#first-longitude {
+    background-color: beige;
+    max-width: 100%;
+    width: 5em;
+}
+
+#second-latitude {
+    background-color: beige;
+    max-width: 100%;
+    width: 5em;
+}
+
+
+#second-longitude {
+    background-color: beige;
+    max-width: 100%;
+    width: 5em;
+}
+
+#third-latitude {
+    background-color: beige;
+    max-width: 100%;
+    width: 5em;
+}
+
+#third-longitude {
+    background-color: beige;
     max-width: 100%;
     width: 5em;
 }
