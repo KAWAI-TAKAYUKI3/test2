@@ -37,7 +37,7 @@ let firstTriger = 0;
 let secondTriger = 0;
 let latitude = 0;
 let longitude = 0;
-let gpsAccuracy = 200; //単位はメートル
+let gpsAccuracy = 50; //単位はメートル
 let destinationLatitude = 0;
 let destinationLongitude = 0;
 let firstLatitude = 0;
@@ -102,7 +102,7 @@ function underMoving() {
   } else if (latitude > firstLatitude - accuracy 
     && latitude < firstLatitude + accuracy 
     && longitude > firstLongitude - accuracy 
-    && longitude < firstLongitudee + accuracy
+    && longitude < firstLongitude + accuracy
     && firstTriger === 0) {
         document.getElementById("lap1").textContent = makeTime();
         arrivalTime = new Date().getTime();
@@ -113,12 +113,28 @@ function underMoving() {
     && longitude > secondLongitude - accuracy 
     && longitude < secondLongitude + accuracy
     && secondTriger === 0) {
-        document.getElementById("lap1").textContent = makeTime();
+        document.getElementById("lap2").textContent = makeTime();
         arrivalTime = new Date().getTime();
-        document.getElementById("lap1-spend").textContent = getSpendTime(startTime, arrivalTime);
+        document.getElementById("lap2-spend").textContent = getSpendTime(startTime, arrivalTime);
         secondTriger = 1;
   }
-  
+  console.log(firstLatitude, firstLongitude, secondLatitude, secondLongitude);
+  console.log(startTriger,firstTriger, secondTriger);
+  console.log(latitude > firstLatitude - accuracy 
+    && latitude < firstLatitude + accuracy 
+    && longitude > firstLongitude - accuracy 
+    && longitude < firstLongitude + accuracy
+    && firstTriger === 0);
+  console.log(latitude > firstLatitude - accuracy 
+    && latitude < firstLatitude + accuracy 
+    && longitude > firstLongitude - accuracy 
+    && longitude < firstLongitude + accuracy
+    && firstTriger === 0)
+  console.log(latitude > secondLatitude - accuracy 
+    && latitude < secondLatitude + accuracy 
+    && longitude > secondLongitude - accuracy 
+    && longitude < secondLongitude + accuracy
+    && secondTriger === 0)
 }
 
       
